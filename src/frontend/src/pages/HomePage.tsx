@@ -715,40 +715,51 @@ function ContactSection() {
             </p>
 
             <div className="space-y-5">
-              {[
-                {
-                  icon: Phone,
-                  label: "Call Us",
-                  value: "+91 63059 25803",
-                },
-                {
-                  icon: Mail,
-                  label: "Email Us",
-                  value: "tsgovardhan471@gmail.com",
-                },
-                {
-                  icon: MapPin,
-                  label: "Office",
-                  value: "India",
-                },
-              ].map((item) => {
-                const Icon = item.icon;
-                return (
-                  <div key={item.label} className="flex items-center gap-4">
-                    <div className="w-11 h-11 rounded-xl bg-navy-deep flex items-center justify-center flex-shrink-0">
-                      <Icon className="h-5 w-5 text-gold" />
-                    </div>
-                    <div>
-                      <p className="text-xs text-muted-foreground font-medium uppercase tracking-wider">
-                        {item.label}
-                      </p>
-                      <p className="text-foreground font-medium">
-                        {item.value}
-                      </p>
-                    </div>
-                  </div>
-                );
-              })}
+              <div className="flex items-center gap-4">
+                <div className="w-11 h-11 rounded-xl bg-navy-deep flex items-center justify-center flex-shrink-0">
+                  <Phone className="h-5 w-5 text-gold" />
+                </div>
+                <div>
+                  <p className="text-xs text-muted-foreground font-medium uppercase tracking-wider">
+                    Call Us
+                  </p>
+                  <a
+                    href="tel:+916305925803"
+                    className="text-foreground font-medium hover:text-gold transition-colors"
+                  >
+                    +91 63059 25803
+                  </a>
+                </div>
+              </div>
+              <div className="flex items-center gap-4">
+                <div className="w-11 h-11 rounded-xl bg-navy-deep flex items-center justify-center flex-shrink-0">
+                  <Mail className="h-5 w-5 text-gold" />
+                </div>
+                <div>
+                  <p className="text-xs text-muted-foreground font-medium uppercase tracking-wider">
+                    Email Us
+                  </p>
+                  <a
+                    href="mailto:tsgovardhan471@gmail.com"
+                    className="text-foreground font-medium hover:text-gold transition-colors"
+                  >
+                    tsgovardhan471@gmail.com
+                  </a>
+                </div>
+              </div>
+              <div className="flex items-center gap-4">
+                <div className="w-11 h-11 rounded-xl bg-navy-deep flex items-center justify-center flex-shrink-0">
+                  <MapPin className="h-5 w-5 text-gold" />
+                </div>
+                <div>
+                  <p className="text-xs text-muted-foreground font-medium uppercase tracking-wider">
+                    Office
+                  </p>
+                  <p className="text-foreground font-medium">
+                    Bangalore, India
+                  </p>
+                </div>
+              </div>
             </div>
           </motion.div>
 
@@ -774,10 +785,19 @@ function ContactSection() {
                   <h3 className="font-display text-2xl font-bold text-foreground mb-3">
                     Inquiry Received!
                   </h3>
-                  <p className="text-muted-foreground leading-relaxed mb-6">
+                  <p className="text-muted-foreground leading-relaxed mb-3">
                     Thank you for reaching out. Our team will review your
                     requirements and contact you within{" "}
                     <strong className="text-foreground">24 hours</strong>.
+                  </p>
+                  <p className="text-muted-foreground text-sm leading-relaxed mb-6">
+                    You can also reach us directly at{" "}
+                    <a
+                      href="mailto:tsgovardhan471@gmail.com"
+                      className="text-gold font-medium hover:underline"
+                    >
+                      tsgovardhan471@gmail.com
+                    </a>
                   </p>
                   <Button
                     variant="outline"
@@ -944,7 +964,14 @@ function ContactSection() {
                     )}
                   </Button>
                   <p className="text-xs text-muted-foreground text-center">
-                    We respond within 24 hours on business days
+                    We respond within 24 hours on business days &middot; Or
+                    email us at{" "}
+                    <a
+                      href="mailto:tsgovardhan471@gmail.com"
+                      className="text-gold hover:underline font-medium"
+                    >
+                      tsgovardhan471@gmail.com
+                    </a>
                   </p>
                 </motion.form>
               )}
