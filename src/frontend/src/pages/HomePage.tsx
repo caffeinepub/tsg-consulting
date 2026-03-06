@@ -69,17 +69,14 @@ function Navbar() {
         {/* Logo */}
         <a
           href="#home"
-          className="flex items-center gap-3 group"
+          className="flex items-center group"
           data-ocid="nav.link"
         >
           <img
-            src="/assets/generated/tsg-logo-mark-transparent.dim_120x120.png"
-            alt="TSG"
-            className="h-9 w-9 object-contain"
+            src="/assets/generated/tsgp-consulting-logo.dim_800x400.png"
+            alt="TSGP Consulting"
+            className="h-10 object-contain"
           />
-          <span className="font-display font-bold text-white text-lg tracking-tight">
-            TSG <span className="text-gradient-gold">Consulting</span>
-          </span>
         </a>
 
         {/* Desktop nav */}
@@ -540,7 +537,7 @@ function WhyChooseUsSection() {
             </Badge>
             <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-6">
               Why Choose{" "}
-              <span className="text-gradient-gold">TSG Consulting</span>?
+              <span className="text-gradient-gold">TSGP Consulting</span>?
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-8">
               We're not just a placement agency — we're a strategic partner in
@@ -619,7 +616,7 @@ function AboutSection() {
             className="bg-white/5 border border-white/10 rounded-3xl p-8 sm:p-12 text-left"
           >
             <p className="text-white/80 text-lg leading-relaxed mb-6">
-              <strong className="text-white">TSG Consulting</strong> is a
+              <strong className="text-white">TSGP Consulting</strong> is a
               specialized manpower and staffing consultancy focused exclusively
               on the financial services and business process outsourcing
               sectors. Founded by{" "}
@@ -972,15 +969,12 @@ function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-10">
           {/* Brand */}
           <div>
-            <div className="flex items-center gap-3 mb-4">
+            <div className="flex items-center mb-4">
               <img
-                src="/assets/generated/tsg-logo-mark-transparent.dim_120x120.png"
-                alt="TSG"
-                className="h-8 w-8 object-contain"
+                src="/assets/generated/tsgp-consulting-logo.dim_800x400.png"
+                alt="TSGP Consulting"
+                className="h-9 object-contain"
               />
-              <span className="font-display font-bold text-white text-lg">
-                TSG Consulting
-              </span>
             </div>
             <p className="text-white/50 text-sm leading-relaxed">
               Your trusted manpower partner for NBFC, BFSI, and BPO sectors.
@@ -1032,7 +1026,7 @@ function Footer() {
 
         <div className="pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-3">
           <p className="text-white/40 text-sm">
-            © {year} TSG Consulting. All rights reserved. | Owner: Govardhan TS
+            © {year} TSGP Consulting. All rights reserved. | Owner: Govardhan TS
           </p>
           <p className="text-white/30 text-xs">
             Built with ❤️ using{" "}

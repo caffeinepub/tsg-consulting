@@ -289,7 +289,7 @@ export default function AdminPage() {
               Admin Login Required
             </h2>
             <p className="text-muted-foreground max-w-sm mb-8 leading-relaxed">
-              Sign in with your Internet Identity to access the TSG Consulting
+              Sign in with your Internet Identity to access the TSGP Consulting
               admin dashboard and manage inquiries.
             </p>
             <Button
