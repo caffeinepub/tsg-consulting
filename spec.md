@@ -1,24 +1,34 @@
 # TSGP Consulting
 
 ## Current State
-A full consultancy website with Hero, Services, Industries, Why Choose Us, About (with founder photo), Company Photos, Contact Form, and Footer sections.
+A manpower consultancy website with:
+- Landing page (Hero, Services, Industries, Why Choose Us, About, Team, Company Photos, Contact/Inquiry Form)
+- Admin panel to view submitted inquiries
+- Backend: Motoko with inquiry submission and admin management
+- Team section listing 11 employees including Siva Kumar TN (Power BI Developer)
 
 ## Requested Changes (Diff)
 
 ### Add
-- A new "Our Team" section displaying 15 current employees of TSGP Consulting with their name, role/designation, and a professional avatar/photo. This section should appear between the About section and Company Photos section.
+1. **IT Training / Online Classes section** -- A new "Online IT Training" section on the homepage highlighting that TSGP Consulting offers online IT-related classes. Feature Power BI as the flagship course, taught by Siva Kumar TN (10 years experience). Show course cards for:
+   - Power BI (instructor: Siva Kumar TN, 10 yrs exp) -- flagship
+   - AWS Cloud (instructor: Heamanth Kumar)
+   - IT Resume Building (help candidates build strong IT resumes)
+   - IT Interview Preparation (mock interview coaching)
+2. **Mock Interview Preparation** -- Course card / feature block emphasizing mock interview practice for IT roles.
+3. **Resume Building Support** -- Course card / feature block for IT resume building assistance.
+4. **Nav link** -- Add "Training" link in the navbar pointing to the new training section (`#training`).
 
 ### Modify
-- Navigation bar: add "Team" nav link pointing to #team section.
-- Update the team stat in hero from generic to something reflecting "15+ Team Members".
+- Hero badge / tagline: optionally mention "Online IT Training" alongside manpower consultancy.
+- Hero stats: update "Team Members" if needed.
 
 ### Remove
-- Nothing to remove.
+- Nothing removed.
 
 ## Implementation Plan
-1. Add a static array of 15 employees (names, roles, department) to HomePage.tsx.
-2. Create a `TeamSection` component that renders employee cards in a responsive grid (3-5 columns on desktop, 2 on tablet, 1 on mobile).
-3. Each card shows: professional avatar (using initials-based avatar with color coding), name, designation, and department badge.
-4. Insert `<TeamSection />` between `<AboutSection />` and `<CompanyPhotosSection />` in the page layout.
-5. Add "Team" link in the Navbar navLinks array.
-6. Update hero stats to show "15+" for Team Members.
+1. Add `TrainingSection` component to `HomePage.tsx` with course cards for Power BI, AWS, Resume Building, and Mock Interview Prep.
+2. Add `#training` nav link in `Navbar`.
+3. Place `TrainingSection` between the Team section and the Company Photos section (or after team) in the page layout.
+4. Use existing design tokens (navy, gold, card styles) for visual consistency.
+5. No backend changes needed -- training is informational, enrollment via contact form.

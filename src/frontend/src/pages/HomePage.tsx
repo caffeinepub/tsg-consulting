@@ -15,10 +15,12 @@ import { Sector, useSubmitInquiry } from "@/hooks/useQueries";
 import { Link } from "@tanstack/react-router";
 import {
   ArrowRight,
+  BarChart2,
   Briefcase,
   Building2,
   CheckCircle2,
   Clock,
+  Cloud,
   DollarSign,
   FileText,
   GraduationCap,
@@ -27,9 +29,11 @@ import {
   Mail,
   MapPin,
   Menu,
+  MessageSquare,
   Phone,
   Search,
   ShieldCheck,
+  Star,
   TrendingUp,
   UserCheck,
   Users,
@@ -55,6 +59,7 @@ function Navbar() {
     { label: "Services", href: "#services" },
     { label: "Industries", href: "#industries" },
     { label: "Team", href: "#team" },
+    { label: "Training", href: "#training" },
     { label: "About", href: "#about" },
     { label: "Contact", href: "#contact" },
   ];
@@ -239,10 +244,11 @@ function HeroSection() {
           >
             Delivering skilled talent to{" "}
             <span className="text-gold font-semibold">NBFC</span>,{" "}
-            <span className="text-gold font-semibold">BFSI</span>, and{" "}
+            <span className="text-gold font-semibold">BFSI</span>,{" "}
+            <span className="text-gold font-semibold">Banking</span>, and{" "}
             <span className="text-gold font-semibold">BPO</span> organizations
             across India. Connecting the right people with the right
-            opportunities — fast, reliable, compliant.
+            opportunities -- fast, reliable, compliant.
           </motion.p>
 
           <motion.div
@@ -423,6 +429,15 @@ const industries = [
     badge: "bg-blue-100 text-blue-800 border-blue-200",
   },
   {
+    icon: DollarSign,
+    tag: "Banking",
+    title: "Banks & Financial Institutions",
+    description:
+      "Dedicated manpower supply to public sector banks, private banks, cooperative banks, and microfinance institutions. We place tellers, relationship managers, loan officers, back-office executives, and compliance staff.",
+    color: "from-violet-900/20 to-violet-700/10",
+    badge: "bg-violet-100 text-violet-800 border-violet-200",
+  },
+  {
     icon: HeadphonesIcon,
     tag: "BPO",
     title: "Business Process Outsourcing",
@@ -451,12 +466,13 @@ function IndustriesSection() {
             Industries We Serve
           </h2>
           <p className="text-white/60 text-lg max-w-2xl mx-auto leading-relaxed">
-            Deep sector knowledge and an established network of pre-screened
-            candidates across India's financial and service industries.
+            We provide skilled manpower to NBFC, BFSI, Banking, and BPO clients
+            across India -- with deep sector knowledge and a pre-screened
+            candidate network.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {industries.map((ind, i) => {
             const Icon = ind.icon;
             return (
@@ -664,9 +680,9 @@ function AboutSection() {
               professionals and the organizations that need them.
             </p>
             <p className="text-white/70 text-base leading-relaxed mb-8">
-              Our team brings hands-on experience in NBFC, BFSI, and BPO
-              environments, allowing us to assess candidates beyond
-              qualifications — evaluating role fitment, cultural alignment, and
+              Our team brings hands-on experience in NBFC, BFSI, Banking, and
+              BPO environments, allowing us to assess candidates beyond
+              qualifications -- evaluating role fitment, cultural alignment, and
               long-term potential. We operate with full transparency, deliver
               within timelines, and remain accountable at every step of the
               hiring process.
@@ -880,6 +896,233 @@ function TeamSection() {
             );
           })}
         </div>
+      </div>
+    </section>
+  );
+}
+
+/* ─── Training ─────────────────────────────────────────────── */
+const trainingCourses = [
+  {
+    icon: BarChart2,
+    title: "Power BI Masterclass",
+    instructor: "Siva Kumar TN",
+    instructorDetail: "10 Years of Power BI Experience",
+    description:
+      "Master Power BI from scratch — data modeling, DAX, dashboards, and real-world business intelligence projects. Learn from an industry expert with 10 years of hands-on Power BI experience.",
+    badge: "FLAGSHIP COURSE",
+    label: "IT Training",
+    flagship: true,
+  },
+  {
+    icon: Cloud,
+    title: "AWS Cloud Fundamentals",
+    instructor: "Heamanth Kumar",
+    instructorDetail: "AWS Engineer",
+    description:
+      "Learn AWS core services, cloud architecture, IAM, EC2, S3, and deployment essentials. Ideal for IT professionals transitioning to cloud roles.",
+    badge: null,
+    label: "IT Training",
+    flagship: false,
+  },
+  {
+    icon: FileText,
+    title: "IT Resume Building",
+    instructor: null,
+    instructorDetail: null,
+    description:
+      "Get professional help crafting an ATS-friendly IT resume that highlights your skills, projects, and achievements — tailored for the Indian job market.",
+    badge: null,
+    label: "Career Support",
+    flagship: false,
+  },
+  {
+    icon: MessageSquare,
+    title: "Mock Interview Preparation",
+    instructor: null,
+    instructorDetail: null,
+    description:
+      "Practice with real interview questions for IT roles. Get personalized feedback on your answers, communication, and confidence to ace your next interview.",
+    badge: null,
+    label: "Career Support",
+    flagship: false,
+  },
+];
+
+function TrainingSection() {
+  return (
+    <section id="training" className="py-24 section-navy">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Header */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16"
+        >
+          <Badge className="mb-4 bg-gold/20 text-gold border-gold/30 font-medium px-4 py-1.5">
+            Online IT Training
+          </Badge>
+          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
+            Upskill with <span className="text-gradient-gold">Expert-Led</span>{" "}
+            Online Classes
+          </h2>
+          <p className="text-white/60 text-lg max-w-3xl mx-auto leading-relaxed">
+            TSGP Consulting offers online IT training and career support
+            programs to help professionals grow, crack interviews, and land
+            better roles.
+          </p>
+        </motion.div>
+
+        {/* Cards grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+          {trainingCourses.map((course, i) => {
+            const Icon = course.icon;
+            const isCareer = course.label === "Career Support";
+            return (
+              <motion.div
+                key={course.title}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: i * 0.1 }}
+                className={`relative group card-hover rounded-2xl p-7 cursor-default overflow-hidden ${
+                  course.flagship
+                    ? "bg-gradient-to-br from-navy-deep via-[oklch(0.2_0.04_240)] to-navy-deep border-2 border-gold/60 shadow-[0_0_40px_oklch(0.75_0.15_65_/_0.15)]"
+                    : isCareer
+                      ? "bg-card border border-emerald-500/30 hover:border-emerald-400/50"
+                      : "bg-card border border-border hover:border-gold/30"
+                }`}
+                data-ocid={`training.item.${i + 1}`}
+              >
+                {/* Flagship shimmer background */}
+                {course.flagship && (
+                  <div className="absolute inset-0 opacity-5 pointer-events-none">
+                    <div
+                      className="w-full h-full"
+                      style={{
+                        backgroundImage:
+                          "radial-gradient(circle at 80% 20%, oklch(0.75 0.15 65) 0%, transparent 60%)",
+                      }}
+                    />
+                  </div>
+                )}
+
+                {/* Top row: icon + badges */}
+                <div className="flex items-start justify-between gap-4 mb-5">
+                  <div
+                    className={`w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 ${
+                      course.flagship
+                        ? "bg-gold/20"
+                        : isCareer
+                          ? "bg-emerald-500/15"
+                          : "bg-navy-deep"
+                    }`}
+                  >
+                    <Icon
+                      className={`h-6 w-6 ${
+                        course.flagship
+                          ? "text-gold"
+                          : isCareer
+                            ? "text-emerald-400"
+                            : "text-gold"
+                      }`}
+                    />
+                  </div>
+
+                  <div className="flex flex-wrap gap-2 justify-end">
+                    {course.flagship && (
+                      <span className="flex items-center gap-1 text-xs font-bold tracking-widest uppercase px-3 py-1 rounded-full bg-gold text-navy-deep">
+                        <Star className="h-3 w-3 fill-current" />
+                        {course.badge}
+                      </span>
+                    )}
+                    <span
+                      className={`text-xs font-semibold tracking-wide uppercase px-2.5 py-1 rounded-full border ${
+                        isCareer
+                          ? "bg-emerald-500/15 text-emerald-400 border-emerald-500/30"
+                          : "bg-gold/10 text-gold border-gold/20"
+                      }`}
+                    >
+                      {course.label}
+                    </span>
+                  </div>
+                </div>
+
+                {/* Title */}
+                <h3
+                  className={`font-display text-xl font-bold mb-2 leading-tight ${
+                    course.flagship ? "text-white" : "text-foreground"
+                  }`}
+                >
+                  {course.title}
+                </h3>
+
+                {/* Instructor */}
+                {course.instructor && (
+                  <div className="flex items-center gap-2 mb-3">
+                    <div
+                      className={`w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold ${
+                        course.flagship
+                          ? "bg-gold text-navy-deep"
+                          : "bg-accent text-accent-foreground"
+                      }`}
+                    >
+                      {course.instructor[0]}
+                    </div>
+                    <div>
+                      <span
+                        className={`text-sm font-semibold ${course.flagship ? "text-gold" : "text-foreground"}`}
+                      >
+                        {course.instructor}
+                      </span>
+                      {course.instructorDetail && (
+                        <span
+                          className={`text-xs ml-2 ${course.flagship ? "text-white/50" : "text-muted-foreground"}`}
+                        >
+                          · {course.instructorDetail}
+                        </span>
+                      )}
+                    </div>
+                  </div>
+                )}
+
+                {/* Description */}
+                <p
+                  className={`text-sm leading-relaxed ${
+                    course.flagship ? "text-white/65" : "text-muted-foreground"
+                  }`}
+                >
+                  {course.description}
+                </p>
+              </motion.div>
+            );
+          })}
+        </div>
+
+        {/* CTA */}
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.4 }}
+          className="flex flex-col sm:flex-row items-center justify-center gap-4"
+        >
+          <a href="#contact">
+            <Button
+              size="lg"
+              className="bg-gold hover:bg-gold-dark text-navy-deep font-bold rounded-full px-10 text-base shadow-lg"
+              data-ocid="training.primary_button"
+            >
+              Enroll Now — Contact Us
+              <ArrowRight className="ml-2 h-4 w-4" />
+            </Button>
+          </a>
+          <p className="text-white/50 text-sm">
+            Online classes · Flexible timings · Expert instructors
+          </p>
+        </motion.div>
       </div>
     </section>
   );
@@ -1266,7 +1509,8 @@ function Footer() {
               />
             </div>
             <p className="text-white/50 text-sm leading-relaxed">
-              Your trusted manpower partner for NBFC, BFSI, and BPO sectors.
+              Your trusted manpower partner for NBFC, BFSI, Banking, and BPO
+              sectors.
             </p>
           </div>
 
@@ -1301,6 +1545,7 @@ function Footer() {
               {[
                 "NBFC Staffing",
                 "BFSI Staffing",
+                "Banking Staffing",
                 "BPO Staffing",
                 "Payroll Services",
                 "BGV Services",
@@ -1346,6 +1591,7 @@ export default function HomePage() {
         <WhyChooseUsSection />
         <AboutSection />
         <TeamSection />
+        <TrainingSection />
         <CompanyPhotosSection />
         <ContactSection />
       </main>
